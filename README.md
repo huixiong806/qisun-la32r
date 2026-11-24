@@ -23,3 +23,9 @@ verilator --lint-only -Wno-CMPCONST --top-module mycpu_top -f rtl.f
 **BF 的 CPU 实板频率为 109.091 MHz。** 十项工作负载各冷启动三次，以 ROI 周期的中位数计算 IPC。CoreMark 实测为 **1.044 IPC**。
 
 BF 已在 AXI 仿真中运行 Linux 至 `/init` 首条用户态指令。后续强 `IBAR` 和 `CPUCFG` 几何枚举修复属于从 BF 派生的 Linux 实板启动版本。 [BF 的系统指令实现](docs/architecture.md#53-bf-的-ibar-与缓存枚举)
+
+## 许可证
+
+本仓库采用 PolyForm Noncommercial License 1.0.0。使用、修改和分发须遵守许可条款，商业用途需要另行取得授权。 [许可证全文](LICENSE)
+
+This repository is available under the PolyForm Noncommercial License 1.0.0. Commercial use requires separate permission. [License text](LICENSE)
