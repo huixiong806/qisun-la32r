@@ -16,7 +16,7 @@ verilator --lint-only -Wno-CMPCONST --top-module mycpu_top -f rtl.f
 
 ## 实板性能与 Linux 验证
 
-栖隼在 ACX720-V3 的板载 DDR3 平台上以 **109.091 MHz** 运行。实板测试从龙芯 Chiplab 随附的 NSCSCC 性能测试集中选取十项工作负载，每项冷启动三次。运行其中的 CoreMark 程序时，测得计时区间内的指令退休速率为 **1.044 IPC**。 [实板性能报告](docs/board-results.md) · [Chiplab 测试说明](https://gitee.com/loongson-edu/chiplab/blob/chiplab_diff/nscscc_readme.md)
+栖隼在 ACX720-V3 的板载 DDR3 平台上以 **109.091 MHz** 运行。实板测试从龙芯 Chiplab 随附的 NSCSCC 性能测试集中选取十项工作负载，每项冷启动三次。十项工作负载的等权几何平均为 **1.181 IPC**，其中 CoreMark 计时区间实测为 **1.044 IPC**。 [实板性能报告](docs/board-results.md) · [Chiplab 测试说明](https://gitee.com/loongson-edu/chiplab/blob/chiplab_diff/nscscc_readme.md)
 
 仓库中的 RTL 已在 AXI 仿真中运行 Linux 至 `/init` 首条用户态指令。实板冷启动验证使用了后续加入强 `IBAR` 和 `CPUCFG` 几何枚举修复的 RTL。
 
