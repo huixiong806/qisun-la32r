@@ -1,8 +1,8 @@
 # 栖隼 · Qisun LA32R
 
-Qisun (栖隼) is a dual-dispatch, dual-retirement out-of-order CPU core for the LoongArch32 Reduced (LA32R) instruction set, written in synthesizable SystemVerilog. This repository contains the BF revision, originally developed as OOO2 and benchmarked on an ACX720-V3 FPGA with DDR3.
+Qisun (栖隼) is a dual-dispatch, dual-retirement out-of-order CPU core for the LoongArch32 Reduced (LA32R) instruction set, written in synthesizable SystemVerilog. It has been benchmarked on an ACX720-V3 FPGA with DDR3.
 
-栖隼的首个版本来自 OOO2 的 BF 冻结 RTL。它采用 16 项重排序缓冲区、两条整数执行通道和独立访存通道，配有 8 KiB I-cache、16 KiB D-cache 和 16 项 TLB，支持 LA32R 整数与特权指令。
+栖隼是一颗面向 FPGA 的 32 位乱序处理器核，支持 LA32R 整数与特权指令，每拍最多分派和退休两条指令。它采用 16 项重排序缓冲区、两条整数执行通道和独立访存通道，配有 8 KiB I-cache、16 KiB D-cache 和 16 项 TLB。
 
 ## 源码与检查
 
@@ -14,15 +14,14 @@ Qisun (栖隼) is a dual-dispatch, dual-retirement out-of-order CPU core for the
 verilator --lint-only -Wno-CMPCONST --top-module mycpu_top -f rtl.f
 ```
 
-## 设计与版本
+## 实板性能与 Linux 验证
+
+栖隼在 ACX720-V3 的板载 DDR3 平台上以 **109.091 MHz** 运行，CoreMark 实测为 **1.044 IPC**。十项工作负载各冷启动三次，以计时区间的周期中位数计算 IPC。 [实测报告与设计文档](docs/)
+
+仓库中的 RTL 已在 AXI 仿真中运行 Linux 至 `/init` 首条用户态指令。实板冷启动验证使用了后续加入强 `IBAR` 和 `CPUCFG` 几何枚举修复的 RTL。
 
 - [RTL 设计说明](docs/architecture.md) 涵盖流水级、执行和退休、缓存与特权模块。
-- [BF 实板性能](docs/bf-board-results.md) 给出十项工作负载的周期、IPC、测量方法与时序结果。
 - [源码和实测数据校验值](SHA256SUMS) 可通过 `sha256sum -c SHA256SUMS` 核对。
-
-**BF 的 CPU 实板频率为 109.091 MHz。** 十项工作负载各冷启动三次，以 ROI 周期的中位数计算 IPC。CoreMark 实测为 **1.044 IPC**。
-
-BF 已在 AXI 仿真中运行 Linux 至 `/init` 首条用户态指令。后续强 `IBAR` 和 `CPUCFG` 几何枚举修复属于从 BF 派生的 Linux 实板启动版本。 [BF 的系统指令实现](docs/architecture.md#53-bf-的-ibar-与缓存枚举)
 
 ## 许可证
 
