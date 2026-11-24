@@ -1,0 +1,262 @@
+{
+  "revision": "BF",
+  "board": "ACX720-V3",
+  "memory": "DDR3",
+  "clocks_mhz": {
+    "cpu": 109.0909090909091,
+    "axi": 100,
+    "ddr3_ref": 200
+  },
+  "workloads": {
+    "bitcount": {
+      "median_roi_cycles": 210457,
+      "roi_retired": 306719,
+      "ipc": 1.4573950973357979,
+      "runs": [
+        {
+          "repeat": 1,
+          "roi_windows": 1,
+          "roi_cycles": 210453,
+          "roi_retired": 306719
+        },
+        {
+          "repeat": 2,
+          "roi_windows": 1,
+          "roi_cycles": 210457,
+          "roi_retired": 306719
+        },
+        {
+          "repeat": 3,
+          "roi_windows": 1,
+          "roi_cycles": 210511,
+          "roi_retired": 306719
+        }
+      ]
+    },
+    "bubble_sort": {
+      "median_roi_cycles": 1055407,
+      "roi_retired": 936846,
+      "ipc": 0.8876632427111057,
+      "runs": [
+        {
+          "repeat": 1,
+          "roi_windows": 1,
+          "roi_cycles": 1055513,
+          "roi_retired": 936846
+        },
+        {
+          "repeat": 2,
+          "roi_windows": 1,
+          "roi_cycles": 1055407,
+          "roi_retired": 936846
+        },
+        {
+          "repeat": 3,
+          "roi_windows": 1,
+          "roi_cycles": 1055396,
+          "roi_retired": 936846
+        }
+      ]
+    },
+    "coremark": {
+      "median_roi_cycles": 2735714,
+      "roi_retired": 2855313,
+      "ipc": 1.043717654696361,
+      "runs": [
+        {
+          "repeat": 1,
+          "roi_windows": 1,
+          "roi_cycles": 2735380,
+          "roi_retired": 2855313
+        },
+        {
+          "repeat": 2,
+          "roi_windows": 1,
+          "roi_cycles": 2742827,
+          "roi_retired": 2855313
+        },
+        {
+          "repeat": 3,
+          "roi_windows": 1,
+          "roi_cycles": 2735714,
+          "roi_retired": 2855313
+        }
+      ]
+    },
+    "crc32": {
+      "median_roi_cycles": 946571,
+      "roi_retired": 1708620,
+      "ipc": 1.80506269471598,
+      "runs": [
+        {
+          "repeat": 1,
+          "roi_windows": 10,
+          "roi_cycles": 946563,
+          "roi_retired": 1708620
+        },
+        {
+          "repeat": 2,
+          "roi_windows": 10,
+          "roi_cycles": 946571,
+          "roi_retired": 1708620
+        },
+        {
+          "repeat": 3,
+          "roi_windows": 10,
+          "roi_cycles": 946582,
+          "roi_retired": 1708620
+        }
+      ]
+    },
+    "dhrystone": {
+      "median_roi_cycles": 27583,
+      "roi_retired": 31160,
+      "ipc": 1.129681325454084,
+      "runs": [
+        {
+          "repeat": 1,
+          "roi_windows": 1,
+          "roi_cycles": 27585,
+          "roi_retired": 31160
+        },
+        {
+          "repeat": 2,
+          "roi_windows": 1,
+          "roi_cycles": 27580,
+          "roi_retired": 31160
+        },
+        {
+          "repeat": 3,
+          "roi_windows": 1,
+          "roi_cycles": 27583,
+          "roi_retired": 31160
+        }
+      ]
+    },
+    "quick_sort": {
+      "median_roi_cycles": 1457404,
+      "roi_retired": 1330356,
+      "ipc": 0.9128258190590941,
+      "runs": [
+        {
+          "repeat": 1,
+          "roi_windows": 1,
+          "roi_cycles": 1457404,
+          "roi_retired": 1330356
+        },
+        {
+          "repeat": 2,
+          "roi_windows": 1,
+          "roi_cycles": 1457668,
+          "roi_retired": 1330356
+        },
+        {
+          "repeat": 3,
+          "roi_windows": 1,
+          "roi_cycles": 1457379,
+          "roi_retired": 1330356
+        }
+      ]
+    },
+    "select_sort": {
+      "median_roi_cycles": 510449,
+      "roi_retired": 751576,
+      "ipc": 1.4723821576690326,
+      "runs": [
+        {
+          "repeat": 1,
+          "roi_windows": 1,
+          "roi_cycles": 510425,
+          "roi_retired": 751576
+        },
+        {
+          "repeat": 2,
+          "roi_windows": 1,
+          "roi_cycles": 510467,
+          "roi_retired": 751576
+        },
+        {
+          "repeat": 3,
+          "roi_windows": 1,
+          "roi_cycles": 510449,
+          "roi_retired": 751576
+        }
+      ]
+    },
+    "sha": {
+      "median_roi_cycles": 1213571,
+      "roi_retired": 1525750,
+      "ipc": 1.2572399966709817,
+      "runs": [
+        {
+          "repeat": 1,
+          "roi_windows": 10,
+          "roi_cycles": 1213571,
+          "roi_retired": 1525750
+        },
+        {
+          "repeat": 2,
+          "roi_windows": 10,
+          "roi_cycles": 1212435,
+          "roi_retired": 1525750
+        },
+        {
+          "repeat": 3,
+          "roi_windows": 10,
+          "roi_cycles": 1213655,
+          "roi_retired": 1525750
+        }
+      ]
+    },
+    "stream_copy": {
+      "median_roi_cycles": 80843,
+      "roi_retired": 77726,
+      "ipc": 0.9614437861039299,
+      "runs": [
+        {
+          "repeat": 1,
+          "roi_windows": 1,
+          "roi_cycles": 80843,
+          "roi_retired": 77726
+        },
+        {
+          "repeat": 2,
+          "roi_windows": 1,
+          "roi_cycles": 81040,
+          "roi_retired": 77726
+        },
+        {
+          "repeat": 3,
+          "roi_windows": 1,
+          "roi_cycles": 80806,
+          "roi_retired": 77726
+        }
+      ]
+    },
+    "stringsearch": {
+      "median_roi_cycles": 110534,
+      "roi_retired": 130720,
+      "ipc": 1.1826225414804494,
+      "runs": [
+        {
+          "repeat": 1,
+          "roi_windows": 570,
+          "roi_cycles": 110534,
+          "roi_retired": 130720
+        },
+        {
+          "repeat": 2,
+          "roi_windows": 570,
+          "roi_cycles": 110468,
+          "roi_retired": 130720
+        },
+        {
+          "repeat": 3,
+          "roi_windows": 570,
+          "roi_cycles": 110560,
+          "roi_retired": 130720
+        }
+      ]
+    }
+  }
+}

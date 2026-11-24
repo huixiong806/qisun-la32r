@@ -1,0 +1,6 @@
+/obj_dir/
+/.Xil/
+/vivado*.jou
+/vivado*.log
+*.vcd
+*.fst
