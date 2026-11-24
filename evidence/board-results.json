@@ -1,5 +1,5 @@
 {
-  "revision": "BF",
+  "processor": "Qisun LA32R",
   "board": "ACX720-V3",
   "memory": "DDR3",
   "clocks_mhz": {
